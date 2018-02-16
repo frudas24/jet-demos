@@ -16,6 +16,7 @@ import urlparams from "urlparams";
 import screensize from "screensize";
 import viewapp from "viewapp";
 import tabbar from "tabbar";
+import createview from "createview";
 
 
 const samples = new webix.DataCollection({ data:[
@@ -38,6 +39,7 @@ const samples = new webix.DataCollection({ data:[
 	{ group:4, value:"Adapting to Screen Size",		app: screensize,	id:"screensize" },
 	{ group:4, value:"Using App as View", 			app: viewapp,		id:"viewapp" },
 	{ group:4, value:"Using tabbar with Webix Jet",	app: tabbar,		id:"tabbar" },
+	{ group:4, value:"Using Webix API for UI creation",	app: createview,		id:"createview" },
 ]});
 
 
@@ -80,6 +82,7 @@ const samplesApp = new JetApp({
 	id:	"jetsamples",
 	start:		"/top",
 	router: 	EmptyRouter,
+	debug:		true,
 	views:{
 		top:	SamplesNavigation
 	}
